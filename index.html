@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RugalStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👟 RugalStore</h1>
+    <p>Tu catálogo de zapatillas cómodas y con estilo</p>
+  </header>
+
+  <main id="catalogo"></main>
+
+  <script src="data.js"></script>
+  <script>
+    const catalogo = document.getElementById("catalogo");
+
+    zapatillas.forEach(z => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${z.imagen}" alt="${z.nombre}">
+        <h2>${z.nombre}</h2>
+        <p>$${z.precio}</p>
+        <a href="https://wa.me/573151938525?text=Me%20interesa%20cotizar%20esta%20zapatilla:%20${encodeURIComponent(z.nombre)}"
+           class="btn" target="_blank">Cotizar Zapatilla</a>
+      `;
+      catalogo.appendChild(card);
+    });
+  </script>
+</body>
+</html>
