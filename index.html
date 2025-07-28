@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RugalStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👟 RugalStore</h1>
+    <p>Tu catálogo de zapatillas cómodas y con estilo</p>
+  </header>
+
+<!-- Mejor filtro organizado e interactivo -->
+<form id="filtros" class="filtros-modern">
+  <div class="filtro-card">
+    <label for="filtroMarca">
+      <span>Marca</span>
+      <select name="marca" id="filtroMarca">
+        <option value="">Todas</option>
+        <option value="Puma">Puma</option>
+        <option value="Adidas">Adidas</option>
+        <option value="New Balance">New Balance</option>
+        <option value="Nike">Nike</option>
+        <option value="Hugo Boss">Hugo Boss</option>
+      </select>
+    </label>
+  </div>
+  <div class="filtro-card">
+    <label for="filtroPrecio">
+      <span>Precio</span>
+      <select name="precio" id="filtroPrecio">
+        <option value="">Todos</option>
+        <option value="0-150000">Hasta $150.000</option>
+        <option value="150000-300000">$150.000 a $300.000</option>
+        <option value="300000-500000">$300.000 a $500.000</option>
+        <option value="500000-1000000">Más de $500.000</option>
+      </select>
+    </label>
+  </div>
+  <div class="filtro-card">
+    <label for="filtroTalla">
+      <span>Talla</span>
+      <select name="talla" id="filtroTalla">
+        <option value="">Todas</option>
+        <option value="30-36">30 a 36</option>
+        <option value="36-45">36 a 45</option>
+      </select>
+    </label>
+  </div>
+  <div class="filtro-card">
+    <label for="filtroGenero">
+      <span>Género</span>
+      <select name="genero" id="filtroGenero">
+        <option value="">Todos</option>
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Unisex">Unisex</option>
+        <option value="Niño">Niño</option>
+      </select>
+    </label>
+  </div>
+</form>
+
+ <main id="catalogo"></main>
+
+<script src="data.js"></script>
+<script>
+  const catalogo = document.getElementById("catalogo");
+
+  function filtrarZapatillas() {
+    const marca = document.getElementById("filtroMarca").value;
+    const precio = document.getElementById("filtroPrecio").value;
+    const talla = document.getElementById("filtroTalla").value;
+    const genero = document.getElementById("filtroGenero").value;
+
+    let filtradas = zapatillas.filter(z => {
+      let ok = true;
+      if (marca && z.marca !== marca) ok = false;
+      if (precio) {
+        const [min, max] = precio.split("-").map(Number);
+        if (z.precio < min || (max && z.precio > max)) ok = false;
+      }
+      if (talla) {
+        const [minT, maxT] = talla.split("-").map(Number);
+        if (!z.tallas.some(t => t >= minT && t <= maxT)) ok = false;
+      }
+      if (genero && z.genero !== genero) ok = false;
+      return ok;
+    });
+
+    mostrarCatalogo(filtradas);
+  }
+
+  function mostrarCatalogo(lista) {
+    catalogo.innerHTML = "";
+    if (lista.length === 0) {
+      catalogo.innerHTML = "<p>No hay zapatillas que coincidan con los filtros.</p>";
+      return;
+    }
+    lista.forEach((z, index) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      const tieneEstilos = Array.isArray(z.estilos) && z.estilos.length > 0;
+      card.innerHTML = `
+        <a href="detalle.html?id=${zapatillas.indexOf(z)}" class="img-link">
+          <img src="${z.imagen}" alt="${z.nombre}" class="img-principal">
+        </a>
+        ${tieneEstilos ? `
+          <div class="estilos-miniaturas">
+            ${z.estilos.map((e, i) => `
+              <div class="estilo-miniatura" data-img="${e.imagen}" data-index="${i}">
+                <img src="${e.imagen}" alt="${e.nombre}" title="${e.nombre}">
+              </div>
+            `).join("")}
+          </div>
+        ` : ""}
+        <h2>${z.nombre}</h2>
+        <p>$${new Intl.NumberFormat('es-CO').format(z.precio)}</p>
+        <a href="https://wa.me/573151938525?text=Me%20interesa%20cotizar%20esta%20zapatilla:%20${encodeURIComponent(z.nombre)}"
+           class="btn" target="_blank">Cotizar Zapatilla</a>
+      `;
+      catalogo.appendChild(card);
+
+      // Selección de estilos (miniaturas)
+      if (tieneEstilos) {
+        const imgPrincipal = card.querySelector(".img-principal");
+        const miniaturas = card.querySelectorAll(".estilo-miniatura");
+        miniaturas.forEach(item => {
+          item.addEventListener("click", () => {
+            imgPrincipal.src = item.getAttribute("data-img");
+            miniaturas.forEach(i => i.classList.remove("seleccionado"));
+            item.classList.add("seleccionado");
+          });
+        });
+      }
+    });
+  }
+
+  // Eventos de filtros
+  document.getElementById("filtros").addEventListener("change", filtrarZapatillas);
+
+  // Mostrar todo al cargar
+  mostrarCatalogo(zapatillas);
+</script>
+  <footer>
+    <p>© 2025 RugalStore. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
