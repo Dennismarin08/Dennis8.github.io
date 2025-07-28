@@ -54,7 +54,7 @@ const zapatillas = [
   {
   nombre: "HUGO BOSS ",
   marca: "Hugo Boss",
-  precio: 0,
+  precio: 110000,
   imagen: "zapatillas/HUGO BOSS.jpeg",
   tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
