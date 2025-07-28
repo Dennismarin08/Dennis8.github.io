@@ -6,7 +6,7 @@ const zapatillas = [
     marca: "Puma",
     precio: 100000,
     imagen: "zapatillas/PUMA SUEDE XL.jpeg",
-    tallas: [36, 37, 38, 39, 40, 41, 42],
+    tallas: [38, 39, 40, 41, 42, 43, 44],
     genero: "Hombre"
   },
   {
@@ -38,7 +38,7 @@ const zapatillas = [
   marca: "Nike",
   precio: 70000,
   imagen: "zapatillas/NIKE LEGACY NEGRO.jpeg",
-  tallas: [35, 36, 37, 38],
+  tallas: [35, 36, 37, 38, 39],
   genero: "Mujer",
   estilos: [
     {
@@ -56,7 +56,7 @@ const zapatillas = [
   marca: "Hugo Boss",
   precio: 0,
   imagen: "zapatillas/HUGO BOSS.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -64,7 +64,7 @@ const zapatillas = [
   marca: "Nike",
   precio:125000,
   imagen: "zapatillas/NIKE KYRIE.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39],
   genero: "Mujer"
 },
   {
@@ -72,7 +72,7 @@ const zapatillas = [
   marca: "Nike",
   precio: 90000,
   imagen: "zapatillas/NIKE RETRO 4 RAYO.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
   genero: "unisex"
 },
   {
@@ -80,7 +80,7 @@ const zapatillas = [
   marca: "Adidas",
   precio: 95000,
   imagen: "zapatillas/ADIDAS SAMBA.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39,],
   genero: "Mujer"
 },
   {
@@ -88,7 +88,7 @@ const zapatillas = [
   marca: "Adidas",
   precio: 120000,
   imagen: "zapatillas/ADIDAS NASTASE.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -96,7 +96,7 @@ const zapatillas = [
   marca: "Nike",
   precio:120000,
   imagen: "zapatillas/NIKE CORTEZ.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
   genero: "Unisex"
 },
   {
@@ -104,7 +104,7 @@ const zapatillas = [
   marca: "Nike",
   precio: 115000,
   imagen: "zapatillas/NIKE ARAÑA NEGRO.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -112,7 +112,7 @@ const zapatillas = [
   marca: "Nike",
   precio: 115000,
   imagen: "zapatillas/NIKE ARAÑA AZUL.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -120,7 +120,7 @@ const zapatillas = [
   marca: "New Balance",
   precio: 115000,
   imagen: "zapatillas/NEW BALANCE GRIS.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -128,7 +128,7 @@ const zapatillas = [
   marca: "New Balance",
   precio: 115000,
   imagen: "zapatillas/NEW BALANCE NEGRO.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
   {
@@ -136,7 +136,7 @@ const zapatillas = [
   marca: "Adidas",
   precio: 80000,
   imagen: "zapatillas/ADIDAS LEGO.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre"
 },
 
@@ -145,7 +145,7 @@ const zapatillas = [
   marca: "New Balance",
   precio: 120000,
   imagen: "zapatillas/NEW BALANCE 999 BLANCO.jpeg",
-  tallas: [35, 36, 37, 38],
+  tallas: [35, 36, 37, 38, 39],
   genero: "Mujer",
   estilos: [
     {
@@ -163,7 +163,7 @@ const zapatillas = [
   marca: "Nike",
   precio:100000,
   imagen: "zapatillas/NIKE TN ROJO BLANCO.jpeg",
-  tallas: [],
+  tallas: [39, 40, 41, 42, 43, 44],
   genero: "Hombre",
   estilos: [
     {
@@ -181,7 +181,7 @@ const zapatillas = [
   marca: "Nike",
   precio:115000,
   imagen: "zapatillas/NIKE JORDAN RETRO 1.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39],
   genero: "Mujer",
 },
   {
@@ -189,7 +189,7 @@ const zapatillas = [
   marca: "Nike",
   precio:100000,
   imagen: "zapatillas/NIKE AIR FORCE ONE.jpeg",
-  tallas: [],
+  tallas: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
   genero: "Unisex"
 },
 
