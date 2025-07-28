@@ -28,7 +28,7 @@
           <div class="detalle-info">
             <h2>${z.nombre}</h2>
             <p><strong>Precio:</strong> $${new Intl.NumberFormat('es-CO').format(z.precio)}</p>
-            <a class="btn" href="https://wa.me/573151938525?text=Me%20interesa%20cotizar%20esta%20zapatilla:%20${encodeURIComponent(z.nombre)}" target="_blank">
+            <a class="btn btn-wsp" href="https://wa.me/573151938525?text=${encodeURIComponent('Hola, quisiera cotizar esta zapatilla: ' + z.nombre)}" target="_blank">
               Cotizar por WhatsApp
             </a>
             <br><br>
