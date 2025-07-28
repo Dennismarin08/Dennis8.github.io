@@ -167,13 +167,38 @@ const zapatillas = [
   genero: "Hombre",
   estilos: [
     {
-      nombre: "Negro",
-      imagen: "zapatillas/NIKE TN ROJO BLANCO.jpeg"
+      nombre: "NIKE TN NEGRO AZUL",
+      imagen: "zapatillas/NIKE TN NEGRO AZUL.jpeg"
     },
     {
-      nombre: "Blanco",
-      imagen: "zapatillas/NIKE NARANJA.jpeg"
-    }
+      nombre: "NIKE TN AZUL BLANCO",
+      imagen: "zapatillas/NIKE TN AZUL BLANCO.jpeg"
+    },
+    {
+      nombre: "NIKE TN BLANCO ROJO",
+      imagen: "zapatillas/NIKE TN BLANCO ROJO.jpeg"
+
+    },
+    {
+      nombre: "NIKE TN BLANCO VERDE",
+      imagen: "zapatillas/NIKE TN BLANCO VERDE.jpeg"
+
+    },
+    {
+      nombre: "NIKE TN ROJO BLANCO",
+      imagen: "zapatillas/NIKE TN ROJO BLANCO.jpeg"
+
+    },
+      {
+      nombre: "NIKE TN VERDE NEGRO",
+      imagen: "zapatillas/NIKE TN VERDE NEGRO.jpeg"
+
+    },  {
+      nombre: "NIKE TN AMARILLO NEGRO",
+      imagen: "zapatillas/NIKE TN AMARILLO NEGRO.jpeg"
+
+    },
+
   ]
 },
   {
