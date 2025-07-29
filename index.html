@@ -24,6 +24,16 @@
         <option value="New Balance">New Balance</option>
         <option value="Nike">Nike</option>
         <option value="Hugo Boss">Hugo Boss</option>
+        <option value="Le Coq">Le Coq</option>
+        <option value="Skecher">Skecher</option>
+        <option value="Reebok">Reebok</option>
+        <option value="Converse">Converse</option>
+        <option value="Vans">Vans</option>
+        <option value="Fila">Fila</option>
+        <option value="Under Armour">Under Armour</option>
+        <option value="Asics">Asics</option>
+        <option value="Havaianas">Havaianas</option>
+        <option value="Crocs">Crocs</option>
       </select>
     </label>
   </div>
@@ -63,10 +73,15 @@
 </form>
 
  <main id="catalogo"></main>
+ <div id="paginacion"></div>
 
 <script src="data.js"></script>
 <script>
   const catalogo = document.getElementById("catalogo");
+  const paginacion = document.getElementById("paginacion");
+  const ITEMS_POR_PAGINA = 16;
+  let paginaActual = 1;
+  let zapatillasFiltradas = [];
 
   function filtrarZapatillas() {
     const marca = document.getElementById("filtroMarca").value;
@@ -74,7 +89,7 @@
     const talla = document.getElementById("filtroTalla").value;
     const genero = document.getElementById("filtroGenero").value;
 
-    let filtradas = zapatillas.filter(z => {
+    zapatillasFiltradas = zapatillas.filter(z => {
       let ok = true;
       if (marca && z.marca !== marca) ok = false;
       if (precio) {
@@ -89,16 +104,23 @@
       return ok;
     });
 
-    mostrarCatalogo(filtradas);
+    paginaActual = 1;
+    mostrarCatalogo(zapatillasFiltradas, paginaActual);
+    generarPaginacion(zapatillasFiltradas.length);
   }
 
-  function mostrarCatalogo(lista) {
+  function mostrarCatalogo(lista, pagina = 1) {
     catalogo.innerHTML = "";
     if (lista.length === 0) {
       catalogo.innerHTML = "<p>No hay zapatillas que coincidan con los filtros.</p>";
       return;
     }
-    lista.forEach((z, index) => {
+
+    const inicio = (pagina - 1) * ITEMS_POR_PAGINA;
+    const fin = inicio + ITEMS_POR_PAGINA;
+    const paginados = lista.slice(inicio, fin);
+
+    paginados.forEach((z, index) => {
       const card = document.createElement("div");
       card.className = "card";
       const tieneEstilos = Array.isArray(z.estilos) && z.estilos.length > 0;
@@ -122,7 +144,6 @@
       `;
       catalogo.appendChild(card);
 
-      // Selección de estilos (miniaturas)
       if (tieneEstilos) {
         const imgPrincipal = card.querySelector(".img-principal");
         const miniaturas = card.querySelectorAll(".estilo-miniatura");
@@ -132,7 +153,6 @@
             imgPrincipal.src = item.getAttribute("data-img");
             miniaturas.forEach(i => i.classList.remove("seleccionado"));
             item.classList.add("seleccionado");
-            // Actualiza el enlace de WhatsApp con la imagen seleccionada
             wspBtn.href = `https://wa.me/573151938525?text=Me%20interesa%20cotizar%20esta%20zapatilla:%20${encodeURIComponent(z.nombre)}%0AImagen:%20${encodeURIComponent(item.getAttribute("data-img"))}`;
           });
         });
@@ -140,14 +160,35 @@
     });
   }
 
+  function generarPaginacion(totalItems) {
+    paginacion.innerHTML = "";
+    const totalPaginas = Math.ceil(totalItems / ITEMS_POR_PAGINA);
+
+    for (let i = 1; i <= totalPaginas; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+      btn.className = (i === paginaActual) ? "activo" : "";
+      btn.addEventListener("click", () => {
+        paginaActual = i;
+        mostrarCatalogo(zapatillasFiltradas.length > 0 ? zapatillasFiltradas : zapatillas, paginaActual);
+        generarPaginacion(zapatillasFiltradas.length > 0 ? zapatillasFiltradas.length : zapatillas.length);
+      });
+      paginacion.appendChild(btn);
+    }
+  }
+
   // Eventos de filtros
   document.getElementById("filtros").addEventListener("change", filtrarZapatillas);
 
-  // Mostrar todo al cargar
-  mostrarCatalogo(zapatillas);
+  // Inicializar catálogo completo con paginación
+  zapatillasFiltradas = zapatillas;
+  mostrarCatalogo(zapatillasFiltradas, paginaActual);
+  generarPaginacion(zapatillasFiltradas.length);
 </script>
+
   <footer>
     <p>© 2025 RugalStore. Todos los derechos reservados.</p>
+    <p>© DM08</p>
   </footer>
 </body>
 </html>
