@@ -395,7 +395,7 @@ const zapatillas = [
 {
   nombre: "LE COQ SPORFIT",
   marca: "Le Coq",
-  precio: 12000,
+  precio: 120000,
   imagen: "zapatillas page 2/LE COQ SPORFIT.jpeg",
   tallas: [],
   genero: "Hombre",
