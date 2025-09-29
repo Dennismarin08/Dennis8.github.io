@@ -586,8 +586,7 @@ h2::after {
 
 /* Fondo con huellitas en consejos y simulador */
 .tips, .simulador {
-  background: url('https://i.imgur.com/ZG2n8pI.png') repeat center/100px,
-              linear-gradient(135deg, #eaf6ff 60%, #cbe3fa 100%);
+
 }
 
 /* Simulador mensaje final */
