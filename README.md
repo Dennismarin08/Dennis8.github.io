@@ -1,1 +1,0 @@
-# rugalstore.github.io
