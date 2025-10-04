@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cachorros Grandes - Multimascotas</title>
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Estilos del catálogo -->
+  <link rel="stylesheet" href="catalogo.css">
+
+  <!-- Script catálogo -->
+  <script defer src="catalogo.js"></script>
+
+  <!-- Fuentes e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpeg" alt="Logo" class="logo-img">
+      </a>
+      <button id="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="menu-text">Menú</span>
+      </button>
+      <nav id="main-nav">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#razas">Cachorros</a>
+        <a href="index.html#historias">Historias</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Catálogo -->
+  <section class="section">
+    <div class="container">
+      <h2>Cachorros Grandes</h2>
+      <div class="catalogo-grid">
+        <!-- Card American Bully -->
+        <div class="card-cachorro">
+          <img src="razas/AMERICAN-BULLY.jpeg" alt="American Bully">
+          <h3>American Bully</h3>
+          <p><strong>Desde:</strong> $3.500.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-target="modal-bully">Ver más</button>
+        </div>
+
+        <!-- Aquí puedes agregar más cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal American Bully -->
+  <div id="modal-bully" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <!-- Carrusel -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="razas/AMERICAN-BULLY.jpeg" alt="American Bully 1">
+          <img src="razas/AMERICAN-BULLY-2.jpeg" alt="American Bully 2">
+          <img src="razas/AMERICAN-BULLY-3.jpeg" alt="American Bully 3">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="info-bully">Información</button>
+        <button class="tab" data-tab="consejos-bully">Consejos</button>
+        <button class="tab" data-tab="cuidados-bully">Cuidados</button>
+      </div>
+
+      <!-- Contenido -->
+      <div class="tab-content active" id="info-bully">
+        <h3>American Bully</h3>
+        <p><strong>Edad:</strong> 5 meses</p>
+        <p><strong>Desde:</strong> $4.500.000</p>
+        <p>El American Bully es una raza fuerte y atlética, con carácter noble y protector. Son excelentes compañeros y muy cariñosos con los niños.</p>
+        <ul>
+          <li>🐶 Tamaño: 43–50 cm</li>
+          <li>⚖️ Peso: 20–40 kg</li>
+          <li>🏡 Ideal para: casas con espacio y familias activas</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="consejos-bully">
+        <h4>Consejos para su crianza</h4>
+        <ul>
+          <li>✔️ Requiere entrenamiento de obediencia desde cachorro.</li>
+          <li>✔️ Socialízalo con personas y otros animales para evitar problemas de comportamiento.</li>
+          <li>✔️ Proporciónale juguetes resistentes para su mandíbula fuerte.</li>
+          <li>✔️ Necesita actividad física diaria para evitar ansiedad.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="cuidados-bully">
+        <h4>Cuidados básicos del American Bully</h4>
+        <ul>
+          <li>✔️ Cepillado 1–2 veces por semana, su pelo es corto.</li>
+          <li>✔️ Requiere chequeos veterinarios regulares por predisposición a displasia de cadera.</li>
+          <li>✔️ Dale alimento balanceado rico en proteínas.</li>
+          <li>✔️ Ejercicio de 1 hora al día mínimo, combinando paseos y juegos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
