@@ -9,6 +9,12 @@
   <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="icon" href="img/logo.jpeg" type="image/jpeg">
+<meta property="og:title" content="Multimascotas del Valle - Venta de Cachorros en Cali">
+<meta property="og:description" content="Cachorros de razas pequeñas, medianas y grandes con certificado y amor.">
+<meta property="og:image" content="img/logo.jpeg">
+<meta property="og:url" content="https://ssm.grupo-human.com">
+<meta name="keywords" content="venta de cachorros Cali, perros pequeños, American Bully, Bulldog Francés, Multimascotas del Valle">
 
 </head>
 <body>
@@ -36,8 +42,10 @@
     <nav id="main-nav">
       <a href="#inicio" class="active">Inicio</a>
       <a href="#razas">Cachorros</a>
-      <a href="#historias">Historias</a>
+      <a href="#kit">Kit de Bienvenida</a>
       <a href="#servicios">Servicios</a>
+      <a href="#garantias">Garantías</a>
+      <a href="#metodos">Métodos de Pago</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -46,10 +54,16 @@
   <!-- HERO -->
 <section id="inicio" class="hero full-hero">
   <div class="hero-bg">
-    <img src="razas/BULLDOG-FRANCES.jpeg" alt="Cachorro Bulldog Francés" class="hero-dog">
-    <img src="razas/CHIHUAHUA.jpeg" alt="Cachorro Chihuahua" class="hero-dog hero-dog-left"><!-- NUEVA IMAGEN -->
+    <!-- Perro izquierda -->
+    <img src="razas/RAZAS GRANDES/AMERICAN.jpg" alt="Cachorro mediano" class="hero-dog hero-dog-left">
+
+    <!-- Perro derecha -->
+    <img src="razas/RAZAS-MEDIANAS/BULLDOG.jpg" alt="Cachorro grande" class="hero-dog hero-dog-right">
+
     <div class="gradient-overlay"></div>
   </div>
+<div class="hero-center-deco"></div>
+
   <div class="hero-content">
     <h1>El amor verdadero tiene cuatro patas 🐾</h1>
     <p>Tu compañero ideal te espera en Multimascotas del Valle</p>
@@ -61,6 +75,7 @@
 </section>
 
 
+
   <!-- SECCIÓN RAZAS -->
   <section id="razas" class="section razas-extend">
     <div class="container">
@@ -68,19 +83,19 @@
       <p class="lead">Cachorros de razas pequeñas, medianas y grandes listos para llenar tu hogar de amor.</p>
       <div class="razas-grid">
         <div class="raza-card reveal">
-          <img src="razas/CHIHUAHUA.jpeg" alt="Cachorros pequeños">
+          <img src="razas/RAZAS-PEQUEÑAS/CHIHUAHUA.jpg" alt="Cachorros pequeños">
           <h3>Cachorros Pequeños</h3>
           <p>Perfectos para espacios pequeños y mucho cariño.</p>
           <a href="cachorros-pequenos.html" class="btn gold">Ver más</a>
         </div>
         <div class="raza-card reveal">
-          <img src="razas/BULLDOG-FRANCES.jpeg" alt="Cachorros medianos">
+          <img src="razas/RAZAS-MEDIANAS/BULLDOG.jpg" alt="Cachorros medianos">
           <h3>Cachorros Medianos</h3>
           <p>Equilibrio entre energía y tamaño. Ideales para familias.</p>
           <a href="cachorros-medianos.html" class="btn gold">Ver más</a>
         </div>
         <div class="raza-card reveal">
-          <img src="razas/AMERICAN-BULLY.jpeg" alt="Cachorros grandes">
+          <img src="razas/RAZAS GRANDES/AMERICAN.jpg" alt="Cachorros grandes">
           <h3>Cachorros Grandes</h3>
           <p>Guardianes leales y compañeros activos.</p>
           <a href="cachorros-grandes.html" class="btn gold">Ver más</a>
@@ -89,62 +104,85 @@
     </div>
   </section>
 
-<!-- ===== Historias ===== -->
-<section id="historias" class="section alt">
-  <div class="container">
-    <h2>Historias que laten 💛</h2>
-    <p class="lead">Cada cachorro es una historia de amor esperando ser contada.</p>
-    <div class="hist-slider">
-      <div class="slide active">"Porque no se adopta un perro, se adopta un corazón."</div>
-      <div class="slide">"El amor más fiel tiene cuatro patas."</div>
-      <div class="slide">"Una familia no está completa sin un amigo peludo."</div>
-    </div>
-    <!-- NUEVO: Puntos del slider -->
-    <div class="hist-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
+
+<!-- ===== Kit de Bienvenida ===== -->
+<section id="kit" class="section alt">
+  <div class="container kit-box reveal">
+    <h2>KIT POR LA COMPRA DE TU CACHORRO</h2>
+    <p class="lead">Por la compra de tu cachorro recibirás:</p>
+
+    <div class="kit-grid">
+      <div class="kit-item">
+        <i class="fas fa-bone"></i>
+        <h4>Juguetes</h4>
+        <p>Diversión asegurada para tu cachorro.</p>
+      </div>
+      <div class="kit-item">
+        <i class="fas fa-drumstick-bite"></i>
+        <h4>Alimento Premium</h4>
+        <p>Nutrición balanceada desde el primer día.</p>
+      </div>
+      <div class="kit-item">
+        <i class="fas fa-bowl-food"></i>
+        <h4>Comederos</h4>
+        <p>Platos exclusivos para comida y agua.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
-  <!-- ===== Servicios ===== -->
-  <section id="servicios" class="section">
-    <div class="container">
-      <h2>Servicios para tu mejor amigo</h2>
-      <p class="lead">Cuidamos su bienestar con amor y experiencia.</p>
-      <div class="services-grid">
-        <div class="service reveal">
-          <div class="service-icon"><i class="fas fa-syringe"></i></div>
-          <h4>Vacunación</h4>
-          <p>Control y seguimiento veterinario confiable.</p>
-          <a href="#contacto" class="btn mini">Solicitar</a>
-        </div>
-        <div class="service reveal">
-          <div class="service-icon"><i class="fas fa-bone"></i></div>
-          <h4>Alimento</h4>
-          <p>Nutrición premium y balanceada.</p>
-          <a href="#contacto" class="btn mini">Solicitar</a>
-        </div>
-        <div class="service reveal">
-          <div class="service-icon"><i class="fas fa-tshirt"></i></div>
-          <h4>Accesorios</h4>
-          <p>Juguetes y ropa que lo harán feliz.</p>
-          <a href="#contacto" class="btn mini">Solicitar</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-    <!-- ===== Garantías ===== -->
+<!-- ===== Servicios ===== -->
+<section id="servicios" class="section">
+  <div class="container">
+    <h2>Servicios para tu mejor amigo</h2>
+    <p class="lead">Cuidamos su bienestar con amor y experiencia.</p>
+    <div class="services-grid">
+      
+      <div class="service reveal">
+        <img src="servicios/VACUNACION.jpeg" alt="Vacunación" class="service-img">
+        <h4>Vacunación</h4>
+        <p>Control y seguimiento veterinario confiable.</p>
+        <a href="#contacto" class="btn mini">Solicitar</a>
+      </div>
+      
+      <div class="service reveal">
+        <img src="servicios/ALIMENTO.jpeg" alt="Alimento Premium" class="service-img">
+        <h4>Alimento</h4>
+        <p>Nutrición premium y balanceada.</p>
+        <a href="#contacto" class="btn mini">Solicitar</a>
+      </div>
+      
+      <div class="service reveal">
+        <img src="servicios/ACCESORIOS.jpg" alt="Accesorios" class="service-img">
+        <h4>Accesorios</h4>
+        <p>Ropa, collares y juguetes que lo harán feliz.</p>
+        <a href="#contacto" class="btn mini">Solicitar</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Garantías ===== -->
 <section id="garantias" class="section alt">
   <div class="container">
     <h2>Tu tranquilidad es nuestra prioridad</h2>
     <div class="garantias-box">
-      <div class="garantia"><i class="fas fa-certificate"></i> Cachorros con certificado de salud</div>
-      <div class="garantia"><i class="fas fa-syringe"></i> Vacunas y desparasitaciones al día</div>
-      <div class="garantia"><i class="fas fa-shield-alt"></i> Garantía de 30 días en salud</div>
+      <div class="garantia reveal"><i class="fa-solid fa-pills"></i><span>1ra dosis de desparasitante 💊</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-syringe"></i><span>1ra dosis de vacuna (parvo) 💉</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-file-medical"></i><span>Hoja de Vida de la Mascota 🧾</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-id-card-clip"></i><span>Carnet de vacunas 📝</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-file-contract"></i><span>Contrato de venta 📄</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-calendar-check"></i><span>Garantía de salud viral de 15 días 🗓️</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-shield-dog"></i><span>Garantía de pureza de por vida 🗓️</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-notes-medical"></i><span>Sistema de Vacunación 📝</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-book"></i><span>Guía de manejo 🧾</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-plane-departure"></i><span>Envíos nacionales e internacionales ✈️</span></div>
+      <div class="garantia reveal"><i class="fa-solid fa-car"></i><span>Envíos locales 🚗</span></div>
+
     </div>
     <p class="nota">En Multimascotas del Valle trabajamos con veterinarios certificados para tu tranquilidad.</p>
   </div>
@@ -172,14 +210,17 @@
     </div>
 
     <!-- Métodos de pago -->
-    <div style="margin-top:28px;">
-      <h3 style="color:var(--gold);text-align:center;margin-bottom:14px;">Métodos de pago</h3>
-      <div class="pagos-grid">
-        <div class="pago-card"><i class="fab fa-cc-visa pago-logo" style="font-size:56px;"></i><span>Visa</span></div>
-        <div class="pago-card"><i class="fab fa-cc-mastercard pago-logo" style="font-size:56px;"></i><span>Mastercard</span></div>
-        <div class="pago-card"><i class="fas fa-money-bill-wave pago-logo" style="font-size:46px;"></i><span>Efectivo</span></div>
-      </div>
-    </div>
+<div style="margin-top:28px;">
+  <h3 style="color:var(--gold);text-align:center;margin-bottom:14px;">Métodos de pago</h3>
+  <div class="pagos-grid">
+    <div class="pago-card"><i class="fab fa-cc-visa pago-logo" style="color:#1a1f71;"></i><span>Visa</span></div>
+    <div class="pago-card"><i class="fab fa-cc-mastercard pago-logo" style="color:#eb001b;"></i><span>Mastercard</span></div>
+    <div class="pago-card"><i class="fas fa-money-bill-wave pago-logo" style="color:#28a745;"></i><span>Efectivo</span></div>
+    <div class="pago-card"><i class="fas fa-mobile-alt pago-logo" style="color:#6f2dbd;"></i><span>Nequi</span></div>
+    <div class="pago-card"><i class="fas fa-mobile-alt pago-logo" style="color:#e6007e;"></i><span>Daviplata</span></div>
+    <div class="pago-card"><i class="fas fa-university pago-logo" style="color:#004481;"></i><span>PSE</span></div>
+  </div>
+</div>
   </div>
 </section>
 

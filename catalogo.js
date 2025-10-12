@@ -1,86 +1,70 @@
-// ==== MODALES ====
-// Botones "Ver más"
-const verMasBtns = document.querySelectorAll(".ver-mas");
+const modal = document.getElementById("modal");
+const modalClose = modal.querySelector(".close");
+const track = modal.querySelector(".carousel-track");
+const infoTab = document.getElementById("info");
+let currentIndex = 0;
 
-verMasBtns.forEach(btn => {
+// Abrir modal dinámico
+document.querySelectorAll(".ver-mas").forEach(btn => {
   btn.addEventListener("click", () => {
-    const targetId = btn.dataset.target;
-    const modal = document.getElementById(targetId);
-    if (modal) {
-      modal.style.display = "flex";
+    const raza = btn.dataset.raza;
+    const edad = btn.dataset.edad;
+    const precio = btn.dataset.precio;
+    const desc = btn.dataset.desc;
+    const imagenes = btn.dataset.img.split(",");
 
-      // Reiniciar carrusel al abrir
-      const track = modal.querySelector(".carousel-track");
-      if (track) {
-        track.style.transform = "translateX(0)";
-        track.dataset.index = 0;
-      }
-    }
+    // Llenar carrusel
+    track.innerHTML = "";
+    imagenes.forEach(img => {
+      const imgEl = document.createElement("img");
+      imgEl.src = img.trim();
+      imgEl.alt = raza;
+      track.appendChild(imgEl);
+    });
+    currentIndex = 0;
+    track.style.transform = "translateX(0)";
+
+    // Llenar info
+    infoTab.innerHTML = `
+      <h3>${raza}</h3>
+      <p><strong>Edad:</strong> ${edad}</p>
+      <p><strong>Desde:</strong> ${precio}</p>
+      <p>${desc}</p>
+    `;
+
+    modal.style.display = "flex";
   });
 });
 
 // Cerrar modal
-document.querySelectorAll(".modal").forEach(modal => {
-  const closeBtn = modal.querySelector(".close");
+modalClose.addEventListener("click", () => modal.style.display = "none");
+window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+// Carrusel
+const prevBtn = modal.querySelector(".carousel-btn.prev");
+const nextBtn = modal.querySelector(".carousel-btn.next");
 
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
-  });
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % track.children.length;
+  updateCarousel();
 });
 
-// ==== CARRUSEL ====
-document.querySelectorAll(".modal").forEach(modal => {
-  const track = modal.querySelector(".carousel-track");
-  const prevBtn = modal.querySelector(".carousel-btn.prev");
-  const nextBtn = modal.querySelector(".carousel-btn.next");
-
-  if (!track || !prevBtn || !nextBtn) return;
-
-  let index = 0;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
-    track.dataset.index = index;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % track.children.length;
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + track.children.length) % track.children.length;
-    updateCarousel();
-  });
-
-  // Autoplay
-  setInterval(() => {
-    if (modal.style.display === "flex") {
-      index = (index + 1) % track.children.length;
-      updateCarousel();
-    }
-  }, 4000);
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + track.children.length) % track.children.length;
+  updateCarousel();
 });
 
-// ==== TABS ====
-document.querySelectorAll(".tabs").forEach(tabContainer => {
-  const tabs = tabContainer.querySelectorAll(".tab");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const modal = tab.closest(".modal");
-      const allTabs = modal.querySelectorAll(".tab");
-      const allContents = modal.querySelectorAll(".tab-content");
-
-      allTabs.forEach(t => t.classList.remove("active"));
-      allContents.forEach(c => c.classList.remove("active"));
-
-      tab.classList.add("active");
-      modal.querySelector("#" + tab.dataset.tab).classList.add("active");
-    });
+// Tabs
+const tabs = modal.querySelectorAll(".tab");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    modal.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+    tab.classList.add("active");
+    modal.querySelector("#" + tab.dataset.tab).classList.add("active");
   });
 });

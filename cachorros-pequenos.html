@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cachorros Pequeños - Multimascotas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cachorros Pequeños | Multimascotas del Valle</title>
+  <meta name="description" content="Venta de cachorros pequeños en Cali con certificado y cuidados." />
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalogo.css" />
 
-  <!-- Estilos globales -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Estilos del catálogo -->
-  <link rel="stylesheet" href="catalogo.css">
-
-  <!-- Script catálogo -->
+  <!-- Scripts -->
   <script defer src="catalogo.js"></script>
+  <script defer src="pequeños.js"></script>
 
   <!-- Fuentes e íconos -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
+
 <body>
   <!-- Navbar -->
   <header id="navbar" class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="brand">
-        <img src="img/logo.jpeg" alt="Logo" class="logo-img">
+        <img src="img/logo.jpeg" alt="Logo" class="logo-img" />
       </a>
       <button id="nav-toggle" aria-label="Abrir menú">
         <span></span>
@@ -40,76 +42,135 @@
     </div>
   </header>
 
-  <!-- Catálogo -->
+  <!-- Sección principal -->
   <section class="section">
     <div class="container">
       <h2>Cachorros Pequeños</h2>
+
+      <!-- Catálogo -->
       <div class="catalogo-grid">
-        <!-- Card Chihuahua -->
         <div class="card-cachorro">
-          <img src="razas/CHIHUAHUA.jpeg" alt="Chihuahua">
+          <img src="razas/RAZAS-PEQUEÑAS/BEAGLE-PORTADA.webp" alt="Beagle">
+          <h3>Beagle</h3>
+          <p><strong>Desde:</strong> $2.800.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="beagle">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/RAZAS-PEQUEÑAS/CHIHUAHUA.jpg" alt="Chihuahua">
           <h3>Chihuahua</h3>
-          <p><strong>Desde:</strong> $1.500.000</p>
+          <p><strong>Desde:</strong> $2.500.000</p>
           <p><strong>Edad:</strong> 3 meses</p>
-          <button class="btn gold ver-mas" data-target="modal-chihuahua">Ver más</button>
+          <button class="btn gold ver-mas" data-raza="chihuahua">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/BICHON.jpg" alt="Bichón Maltés">
+          <h3>Bichón Maltés</h3>
+          <p><strong>Desde:</strong> $3.000.000</p>
+          <p><strong>Edad:</strong> 3 meses</p>
+          <button class="btn gold ver-mas" data-raza="bichon">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/BOSTON.jpg" alt="Boston Terrier">
+          <h3>Boston Terrier</h3>
+          <p><strong>Desde:</strong> $2.900.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="boston">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/COCKER.jpg" alt="Cocker Spaniel">
+          <h3>Cocker</h3>
+          <p><strong>Desde:</strong> $2.700.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="cocker">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/PEKINES.jpg" alt="Pekinés">
+          <h3>Pekinés</h3>
+          <p><strong>Desde:</strong> $2.500.000</p>
+          <p><strong>Edad:</strong> 3 meses</p>
+          <button class="btn gold ver-mas" data-raza="pekines">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/PINSCHER.jpg" alt="Mini Pinscher">
+          <h3>Pinscher</h3>
+          <p><strong>Desde:</strong> $2.200.000</p>
+          <p><strong>Edad:</strong> 3 meses</p>
+          <button class="btn gold ver-mas" data-raza="pinscher">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/PUG.jpg" alt="Pug">
+          <h3>Pug</h3>
+          <p><strong>Desde:</strong> $2.400.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="pug">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/SHIHTZU.jpg" alt="Shih Tzu">
+          <h3>Shih Tzu</h3>
+          <p><strong>Desde:</strong> $2.900.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="shihtzu">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/TECKEL.jpg" alt="Teckel">
+          <h3>Teckel</h3>
+          <p><strong>Desde:</strong> $2.600.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="teckel">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/WESTY.jpg" alt="Westy Terrier">
+          <h3>Westy Terrier</h3>
+          <p><strong>Desde:</strong> $3.000.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="westy">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/YORKSHIRE.jpg" alt="Yorkshire Terrier">
+          <h3>Yorkshire Terrier</h3>
+          <p><strong>Desde:</strong> $2.700.000</p>
+          <p><strong>Edad:</strong> 3 meses</p>
+          <button class="btn gold ver-mas" data-raza="yorkshire">Ver más</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modal Chihuahua -->
-  <div id="modal-chihuahua" class="modal">
+  <!-- Modal general -->
+  <div id="modal-general" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
 
       <!-- Carrusel -->
       <div class="carousel">
-        <div class="carousel-track">
-          <img src="razas/CHIHUAHUA.jpeg" alt="Chihuahua 1">
-          <img src="razas/CHIHUAHUA-2.jpeg" alt="Chihuahua 2">
-          <img src="razas/CHIHUAHUA-3.jpeg" alt="Chihuahua 3">
-        </div>
+        <div id="carousel-images" class="carousel-track"></div>
         <button class="carousel-btn prev">&#10094;</button>
         <button class="carousel-btn next">&#10095;</button>
       </div>
 
       <!-- Tabs -->
       <div class="tabs">
-        <button class="tab active" data-tab="info-chihuahua">Información</button>
-        <button class="tab" data-tab="consejos-chihuahua">Consejos</button>
-        <button class="tab" data-tab="cuidados-chihuahua">Cuidados</button>
+        <button class="tab active" data-tab="info">Información</button>
+        <button class="tab" data-tab="consejos">Consejos</button>
+        <button class="tab" data-tab="cuidados">Cuidados</button>
       </div>
 
-      <!-- Contenido -->
-      <div class="tab-content active" id="info-chihuahua">
-        <h3>Chihuahua</h3>
-        <p><strong>Edad:</strong> 3 meses</p>
-        <p><strong>Desde:</strong> $1.500.000</p>
-        <p>El Chihuahua es la raza más pequeña del mundo, leal y cariñoso. Perfecto para espacios reducidos.</p>
-        <ul>
-          <li>🐶 Tamaño: 15–23 cm</li>
-          <li>⚖️ Peso: 1.5 – 3 kg</li>
-          <li>🏡 Ideal para: apartamentos y personas solas</li>
-        </ul>
-      </div>
-
-      <div class="tab-content" id="consejos-chihuahua">
-        <h4>Consejos</h4>
-        <ul>
-          <li>✔️ Socialízalo temprano para evitar que sea territorial.</li>
-          <li>✔️ Protégelo del frío con ropa ligera.</li>
-          <li>✔️ No lo cargues en exceso, necesita caminar.</li>
-        </ul>
-      </div>
-
-      <div class="tab-content" id="cuidados-chihuahua">
-        <h4>Cuidados</h4>
-        <ul>
-          <li>✔️ Paseos cortos pero diarios.</li>
-          <li>✔️ Cepillado 1–3 veces por semana según su tipo de pelo.</li>
-          <li>✔️ Vigila sus dientes, son propensos a problemas dentales.</li>
-        </ul>
-      </div>
+      <!-- Contenido dinámico -->
+      <div class="tab-content active" id="info"></div>
+      <div class="tab-content" id="consejos"></div>
+      <div class="tab-content" id="cuidados"></div>
     </div>
   </div>
 </body>

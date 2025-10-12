@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cachorros Medianos - Multimascotas</title>
-
+  <title>Cachorros Medianos | Multimascotas del Valle</title>
+  <meta name="description" content="Venta de cachorros medianos en Cali con certificado y cuidados.">
   <!-- Estilos globales -->
   <link rel="stylesheet" href="style.css">
-  <!-- Estilos del catálogo -->
   <link rel="stylesheet" href="catalogo.css">
-
-  <!-- Script catálogo -->
-  <script defer src="catalogo.js"></script>
-
-  <!-- Fuentes e íconos -->
+  <script defer src="medianos.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -45,71 +40,112 @@
     <div class="container">
       <h2>Cachorros Medianos</h2>
       <div class="catalogo-grid">
-        <!-- Card Bulldog Francés -->
+
         <div class="card-cachorro">
-          <img src="razas/BULLDOG-FRANCES.jpeg" alt="Bulldog Francés">
+          <img src="razas/AMERICAN-MEDIANO.jpg" alt="American Bully">
+          <h3>American Bully</h3>
+          <p><strong>Desde:</strong> $3.500.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-raza="bully">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/AKITA.jpg" alt="Akita Americano">
+          <h3>Akita Americano</h3>
+          <p><strong>Desde:</strong> $4.200.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-raza="akita">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/BASSET.jpg" alt="Basset Hound">
+          <h3>Basset Hound</h3>
+          <p><strong>Desde:</strong> $2.900.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="basset">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/RAZAS-MEDIANAS/BULLDOG.jpg" alt="Bulldog Francés">
           <h3>Bulldog Francés</h3>
           <p><strong>Desde:</strong> $2.000.000</p>
           <p><strong>Edad:</strong> 4 meses</p>
-          <button class="btn gold ver-mas" data-target="modal-bulldog">Ver más</button>
+          <button class="btn gold ver-mas" data-raza="bulldog">Ver más</button>
         </div>
+
+        <div class="card-cachorro">
+          <img src="razas/BORDER.jpg" alt="Border Collie">
+          <h3>Border Collie</h3>
+          <p><strong>Desde:</strong> $3.000.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-raza="border">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/BULL-TERRIER.jpg" alt="Bull Terrier">
+          <h3>Bull Terrier</h3>
+          <p><strong>Desde:</strong> $3.200.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-raza="bullterrier">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/INGLÉS.jpg" alt="Bulldog Inglés">
+          <h3>Bulldog Inglés</h3>
+          <p><strong>Desde:</strong> $4.000.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="ingles">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/SPRINGER.jpg" alt="Cocker Springer">
+          <h3>Cocker Springer</h3>
+          <p><strong>Desde:</strong> $2.800.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="springer">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/SHETLAND.jpg" alt="Pastor Shetland">
+          <h3>Pastor Shetland</h3>
+          <p><strong>Desde:</strong> $3.200.000</p>
+          <p><strong>Edad:</strong> 5 meses</p>
+          <button class="btn gold ver-mas" data-raza="shetland">Ver más</button>
+        </div>
+
+        <div class="card-cachorro">
+          <img src="razas/POODLE-MED.jpg" alt="Poodle Mediano">
+          <h3>Poodle Mediano</h3>
+          <p><strong>Desde:</strong> $2.500.000</p>
+          <p><strong>Edad:</strong> 4 meses</p>
+          <button class="btn gold ver-mas" data-raza="poodlemed">Ver más</button>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Modal Bulldog Francés -->
-  <div id="modal-bulldog" class="modal">
+  <!-- Modal General -->
+  <div id="modal-general" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
 
-      <!-- Carrusel -->
-      <div class="carousel">
-        <div class="carousel-track">
-          <img src="razas/BULLDOG-FRANCES.jpeg" alt="Bulldog Francés 1">
-          <img src="razas/BULLDOG-FRANCES-2.jpeg" alt="Bulldog Francés 2">
-          <img src="razas/BULLDOG-FRANCES-3.jpeg" alt="Bulldog Francés 3">
-        </div>
-        <button class="carousel-btn prev">&#10094;</button>
-        <button class="carousel-btn next">&#10095;</button>
-      </div>
+<div class="carousel">
+  <div class="carousel-track" id="carousel-images" style="display: flex; transition: transform 0.5s ease;"></div>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+</div>
 
-      <!-- Tabs -->
+
       <div class="tabs">
-        <button class="tab active" data-tab="info-bulldog">Información</button>
-        <button class="tab" data-tab="consejos-bulldog">Consejos</button>
-        <button class="tab" data-tab="cuidados-bulldog">Cuidados</button>
+        <button class="tab active" data-tab="info">Información</button>
+        <button class="tab" data-tab="consejos">Consejos</button>
+        <button class="tab" data-tab="cuidados">Cuidados</button>
       </div>
 
-      <!-- Contenido -->
-      <div class="tab-content active" id="info-bulldog">
-        <h3>Bulldog Francés</h3>
-        <p><strong>Edad:</strong> 4 meses</p>
-        <p><strong>Desde:</strong> $2.000.000</p>
-        <p>El Bulldog Francés es sociable, cariñoso y perfecto para familias. Su tamaño mediano lo hace ideal para apartamentos.</p>
-        <ul>
-          <li>🐶 Tamaño: 27–33 cm</li>
-          <li>⚖️ Peso: 8–14 kg</li>
-          <li>🏡 Ideal para: apartamentos y familias con niños</li>
-        </ul>
-      </div>
-
-      <div class="tab-content" id="consejos-bulldog">
-        <h4>Consejos</h4>
-        <ul>
-          <li>✔️ Evita ejercicios intensos en calor.</li>
-          <li>✔️ Socialízalo desde pequeño.</li>
-          <li>✔️ Usa arnés en lugar de collar.</li>
-        </ul>
-      </div>
-
-      <div class="tab-content" id="cuidados-bulldog">
-        <h4>Cuidados</h4>
-        <ul>
-          <li>✔️ Limpia los pliegues faciales cada día.</li>
-          <li>✔️ Cepíllalo 2 veces por semana.</li>
-          <li>✔️ Revisa posibles problemas respiratorios.</li>
-        </ul>
-      </div>
+      <div class="tab-content active" id="info"></div>
+      <div class="tab-content" id="consejos"></div>
+      <div class="tab-content" id="cuidados"></div>
     </div>
   </div>
 </body>
